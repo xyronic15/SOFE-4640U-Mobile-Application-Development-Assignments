@@ -107,7 +107,7 @@ public class HomeActivity extends AppCompatActivity implements LocAdapter.onLocL
 
         if (resultCode == Activity.RESULT_OK){
             if (requestCode == REQUEST_CODE_ADD){
-                Toast.makeText(this, "Note added", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Location added", Toast.LENGTH_SHORT).show();
                 locData = (LocModel) data.getExtras().getSerializable("loc");
                 locDatabase.addLoc(locData);
             } else if (requestCode == REQUEST_CODE_EDIT_DELETE){
