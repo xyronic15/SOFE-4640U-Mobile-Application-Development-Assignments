@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DisplayLocActivity">
+
+
+    <ImageView
+        android:id="@+id/imageBack"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginStart="@dimen/_6sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/colorIcons" />
+
+    <TextView
+        android:id="@+id/latitudeTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/ubuntu_medium"
+        android:text="Latitude:"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_20sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageBack" />
+
+    <EditText
+        android:id="@+id/inputLat"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/edit_text_border"
+        android:fontFamily="@font/ubuntu_medium"
+        android:gravity="center_vertical"
+        android:hint="e.g. xx.xxxx"
+        android:imeOptions="actionDone"
+        android:importantForAutofill="no"
+        android:includeFontPadding="false"
+        android:inputType="text"
+        android:textColor="@color/black"
+        android:textColorHint="@color/colorTextHint"
+        android:textSize="@dimen/_16ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/latitudeTitle" />
+
+    <TextView
+        android:id="@+id/longtitudeTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/ubuntu_medium"
+        android:text="Longtitude:"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_20sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/inputLat" />
+
+    <EditText
+        android:id="@+id/inputLong"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/edit_text_border"
+        android:fontFamily="@font/ubuntu_medium"
+        android:gravity="center_vertical"
+        android:hint="e.g. xx.xxxx"
+        android:imeOptions="actionDone"
+        android:importantForAutofill="no"
+        android:includeFontPadding="false"
+        android:inputType="text"
+        android:textColor="@color/black"
+        android:textColorHint="@color/colorTextHint"
+        android:textSize="@dimen/_16ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/longtitudeTitle" />
+
+    <TextView
+        android:id="@+id/addressTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/ubuntu_medium"
+        android:text="Address:"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_20sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/inputLong" />
+
+    <TextView
+        android:id="@+id/addressText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginEnd="16dp"
+        android:background="@null"
+        android:fontFamily="@font/ubuntu_medium"
+        android:gravity="center_vertical"
+        android:text="e.g. 3000 Simcoe St North"
+        android:textColor="@color/colorTextHint"
+        android:textSize="@dimen/_16sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/addressTitle" />
+
+    <LinearLayout
+        android:id="@+id/layoutQuickActions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:elevation="@dimen/_5sdp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:outlineProvider="bounds"
+        android:padding="@dimen/_15sdp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"></LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageDone"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginEnd="@dimen/_30sdp"
+        android:elevation="@dimen/_15sdp"
+        android:background="@drawable/background_done_button"
+        android:contentDescription="@string/app_name"
+        android:padding="@dimen/_5sdp"
+        android:src="@drawable/ic_done"
+        app:layout_constraintBottom_toTopOf="@id/layoutQuickActions"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/layoutQuickActions"
+        app:tint="@color/colorSave" />
+
+    <ImageView
+        android:id="@+id/imageDelete"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginStart="@dimen/_30sdp"
+        android:background="@drawable/background_done_button"
+        android:contentDescription="@string/app_name"
+        android:elevation="@dimen/_15sdp"
+        android:padding="@dimen/_5sdp"
+        android:src="@android:drawable/ic_menu_delete"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@id/layoutQuickActions"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/layoutQuickActions" />
+
+    <Button
+        android:id="@+id/calculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/ubuntu_regular"
+        android:shadowColor="@color/purple_200"
+        android:text="CALCULATE"
+        app:layout_constraintBottom_toTopOf="@+id/imageDone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addressText" />
+</androidx.constraintlayout.widget.ConstraintLayout>
